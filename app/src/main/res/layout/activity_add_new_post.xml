@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/back_ui"
+    android:layout_height="match_parent"
+    tools:context=".AddNewPostActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar_layout_add_post"
+        android:background="@android:color/white"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:id="@+id/add_post_toolbar"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/close_add_post_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/close"
+                    />
+
+                <ImageView
+                    android:id="@+id/save_new_post_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/save_edited_info"
+                    />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/app_ic"
+        android:layout_below="@id/app_bar_layout_add_post"
+        />
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+       android:text="New Post"
+        android:textStyle="bold|italic"
+        android:textSize="50dp"
+        android:layout_below="@id/app_icon"
+        android:textColor="@android:color/black"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/app_name">
+
+        <ImageView
+            android:id="@+id/image_post"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/add_image_icon"
+            android:scaleType="fitCenter"
+            />
+
+        <EditText
+            android:id="@+id/description_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+           android:hint="Say something about the post"
+            android:maxLines="6"
+            android:textColor="@android:color/white"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/codefreaks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="By: Codefreaks"
+        android:textSize="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="4dp"
+
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:src="@drawable/instagram"
+       android:layout_above="@id/codefreaks"
+        android:layout_alignParentEnd="true"
+        android:tint="@android:color/black"
+        android:layout_marginRight="4dp"
+        />
+
+
+</RelativeLayout>
